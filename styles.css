@@ -17,8 +17,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Monteserrat", Arial, Helvetica, sans-serif;
-    outline: 1px solid black !important; 
+    font-family: "Ubuntu", sans-serif;
+    /* outline: 1px solid black !important;  */
 }
 
 html, body {
@@ -43,7 +43,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3rem;
+    padding: 2rem 3rem;
     box-shadow: 2px 4px 20px 1px rgba(0,0,0,0.05);
 }
 
@@ -103,7 +103,8 @@ nav .links{
     justify-content: center;
     padding: 1rem 3rem;
     width: 100%;
-    height: calc(100vh - 56.8px)
+    height: calc(100vh - 88px);
+    overflow: hidden;
 }
 
 .hero-left{
@@ -121,10 +122,30 @@ nav .links{
     font-size: 4rem;
 }
 
+.text-container p{
+    line-height: 1.5;
+}
+
 .hero-right{
     width: 40%;
 }
 
 .hero-right img{
+    width: 120%;
+}
+
+.looping-text{
+    background-color: #DCFF7C;
+    color: var(--light-text);
+    height: 200px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.looping-text h2{
+    text-transform: uppercase;
+    font-size: 10rem;
+    letter-spacing: .4rem;
 }
