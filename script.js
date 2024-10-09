@@ -1,5 +1,9 @@
 let tl = gsap.timeline()
 
+
+document.body.classList.add('no-scroll');
+
+
 tl.from(".text", {
     y: 30,
     opacity: 0,
@@ -17,7 +21,10 @@ tl.from(".loader", {
 tl.to('.pre-loader', {
     top: "-100%",
     ease: "power4.inOut",
-    duration: 1
+    duration: 1,
+    onComplete: () => {
+        document.body.classList.remove('no-scroll');
+    }
 })
 
 
@@ -56,9 +63,9 @@ tl.from('.hero-right img', {
     duration: .5
 }, "first")
 
-tl.to('.looping-text', {
-    transform: 'translateX(-200%)',
-    duration: 3,
+gsap.to('.part', {
+    xPercent: -100,
     repeat: -1,
-    ease: 'none'
+    duration: 5,
+    ease: "linear"
 })
